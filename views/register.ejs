@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <%-include("messages.ejs")%>
+        <h1 class="display-4 m-3">Register</h1>
+        <form action="/user/register" method="POST">
+          <div class="nameandemail">
+            <div class="form-floating m-3">
+              <input
+                id="full_name"
+                name="fullName"
+                type="text"
+                class="form-control"
+                placeholder="Full Name"
+              />
+              <label for="full_name">Full Name</label>
+            </div>
+            <div class="form-floating m-3">
+              <input
+                id="email"
+                name="emailAddress"
+                type="text"
+                class="form-control"
+                placeholder="Email Address"
+              />
+              <label for="email">Email Address </label>
+            </div>
+          </div>
+          <div class="passwords">
+            <div class="form-floating m-3">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+                placeholder="Password"
+              />
+              <label for="password">Password </label>
+            </div>
+            <div class="form-floating m-3">
+              <input
+                id="re_password"
+                name="re_password"
+                type="password"
+                class="form-control"
+                placeholder="Confirm Password"
+              />
+              <label for="re_password">Confirm Password </label>
+            </div>
+          </div>
+          <div class="input-group m-3">
+            <input type="submit" value="Register" class="btn btn-light" />
+          </div>
+        </form>
+        <p class="m-3">
+          Already have an account?
+          <a style="color: blue" href="/user/login">Login!</a>
+        </p>
+      </div>
+    </div>
+
+    <%- include("footer.ejs")%>
+  </body>
+</html>

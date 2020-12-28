@@ -1,0 +1,32 @@
+.customCard {
+  box-shadow: 0px 0px 10px #ccc;
+  padding: 20px;
+  width: 300px;
+  margin: 10% auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+.form {
+  width: 60%;
+  margin: 10% auto;
+}
+.navbar {
+  background-color: black;
+  width: 100%;
+}
+ul.nav {
+  display: flex;
+  grid-gap: 20px;
+  padding: 10px;
+}
+ul.nav li {
+  font-weight: 200;
+  color: white;
+  font-size: 25px;
+}

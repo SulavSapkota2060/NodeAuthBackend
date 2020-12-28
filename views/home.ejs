@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="customCard">
+        <h1 class="display-3">HOME</h1>
+        <a href="/user/login">
+          <button class="btn btn-primary btn-outline btn-lg">Login</button></a
+        >
+        <a href="/user/register">
+          <button class="btn btn-success btn-outline btn-lg">
+            Register
+          </button></a
+        >
+      </div>
+    </div>
+
+    <%- include("footer.ejs")%>
+  </body>
+</html>

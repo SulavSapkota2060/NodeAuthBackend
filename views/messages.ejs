@@ -1,0 +1,17 @@
+<% if(success_msg != ''){ %>
+<div class="alert alert-success alert-dismissible" role="alert">
+  <%= success_msg %>
+</div>
+<% } %> <% if(err_msg != ''){ %>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <%= err_msg %>
+</div>
+<% } %> <% try { errors.map(err => { %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%=err%>
+</div>
+<% })} catch{null} %> <% if(error != ''){ %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <%= error %>
+</div>
+<% } %>

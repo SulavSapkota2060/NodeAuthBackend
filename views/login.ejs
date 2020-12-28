@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1 class="display-4 m-3">Login</h1>
+        <%-include("messages.ejs")%>
+        <form action="/user/login" method="POST">
+          <div class="form-floating m-3">
+            <input
+              id="email"
+              name="email"
+              type="text"
+              class="form-control"
+              placeholder="Email Address"
+            />
+            <label for="email">Email Address </label>
+          </div>
+          <div class="form-floating m-3">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <label for="password">Password </label>
+          </div>
+          <div class="input-group m-3">
+            <input type="submit" value="Login" class="btn btn-light" />
+          </div>
+        </form>
+        <p class="m-3">Don't have an account? <a style="color: blue;" href="/user/register">Register Now!</a></p>
+      </div>
+    </div>
+
+    <%- include("footer.ejs")%>
+  </body>
+</html>

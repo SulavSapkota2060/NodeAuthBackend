@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <%- include("navbar") %>
+    <div class="container">
+      <h1 class="display-1">Profile</h1>
+      <div class="accountData">
+        Full Name:
+        <p><%= user.fullName %></p>
+        <br />
+        Email:
+        <p><%= user.emailAddress %></p>
+        <br />
+        <a href="/user/changePassword">
+          <p style="color: red">Change Password</p></a
+        >
+        <a href="/user/logout"
+          ><button class="btn btn-outline-danger btn-sm">Logout</button></a
+        >
+      </div>
+    </div>
+    <%- include("footer.ejs")%>
+  </body>
+</html>

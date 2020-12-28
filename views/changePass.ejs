@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1 class="display-4 m-3">Change Password</h1>
+        <%-include("messages.ejs")%>
+        <form action="/user/changePassword" method="POST">
+          <div class="form-floating m-3">
+            <input
+              id="old_password"
+              name="oldPassword"
+              type="password"
+              class="form-control"
+              placeholder="Old Password"
+            />
+            <label for="email">Old Password </label>
+          </div>
+          <div class="form-floating m-3">
+            <input
+              id="new_password"
+              name="newPassword"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <label for="new_password">New Password </label>
+          </div>
+          <div class="form-floating m-3">
+            <input
+              id="new_password2"
+              name="newPassword2"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <label for="new_password2">Confirm Password </label>
+          </div>
+          <div class="input-group m-3">
+            <input type="submit" value="Change" class="btn btn-light" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <%- include("footer.ejs")%>
+  </body>
+</html>
