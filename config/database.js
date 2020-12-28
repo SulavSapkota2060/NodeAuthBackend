@@ -1,4 +1,4 @@
 const dbURI =
-  "Your Database KEY";
+  "DATABASE KEY";
 
 module.exports = dbURI;

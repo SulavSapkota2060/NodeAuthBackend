@@ -73,12 +73,13 @@ const changePassword = (req, res, next) => {
       bcrypt.hash(newPassword, 10, (err, hashPass) => {
         user.password = hashPass;
         user.save();
-        req.flash("success_msg", "Password Changed Successfully!");
         req.logout();
       });
+    } else {
+      req.flash("error_msg", "Please check your password.");
+      res.render("changePass")
     }
   });
-  res.redirect("/user/changePassword");
 };
 
 module.exports = {
